@@ -2,9 +2,26 @@
     grid-column: center-start / center-end;
     margin: 15rem 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    //auto-fit = creates as many tracks as can fit based on the width that we define
     gap: 6rem;
+    align-items: start; // aligning grid items in Y axis
+}
 
-    &__single {
+.feature {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2.5rem; // gap: row(x) collum(Y)
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; // -1 applies only for explicit grid
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
     }
 }
