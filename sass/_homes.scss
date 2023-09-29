@@ -1,4 +1,85 @@
 .homes {
-    background-color: $color-secondary;
     grid-column: center-start / center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 7rem;
+}
+
+.home {
+    background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 0;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    transition: all 0.2s;
+    overflow: hidden;
+
+    &:hover {
+        transform: scale(102%);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+    }
+
+    &__img {
+        width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 1;
+        z-index: 1;
+    }
+
+    &__like {
+        fill: $color-primary;
+        width: 3rem;
+        height: 3rem;
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+        justify-self: end;
+        margin: 0.5rem 0.5rem 0 0;
+        z-index: 2;
+    }
+
+    &__name {
+        font-family: $font-display;
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+        background-color: $color-secondary;
+        padding: 1.25rem;
+
+        grid-column: 1 / -1;
+        width: 80%;
+        justify-self: center;
+        grid-row: 1 / -1;
+        align-self: end;
+        transform: translateY(50%); //50% of the element height
+        z-index: 2;
+    }
+
+    &__location,
+    &__rooms {
+        margin-top: 2rem;
+    }
+
+    &__location,
+    &__rooms,
+    &__area,
+    &__price {
+        font-size: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            fill: $color-primary;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__btn {
+        grid-column: 1 / -1;
+    }
 }
