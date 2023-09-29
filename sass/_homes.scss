@@ -11,10 +11,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3.5rem 0;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+
     transition: all 0.2s;
-    overflow: hidden;
 
     &:hover {
         transform: scale(102%);
