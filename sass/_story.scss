@@ -3,7 +3,7 @@
         background-color: $color-primary;
         grid-column: full-start / col-end 4;
 
-        background-image: linear-gradient(to left, rgba($color-primary, 0.3), rgba($color-primary, 0.8)),
+        background-image: linear-gradient(to right, rgba($color-primary, 0.3), rgba($color-primary, 0.8)),
             url("../img/back.jpg");
 
         display: grid;
