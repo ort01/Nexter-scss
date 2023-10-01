@@ -9,11 +9,29 @@
     gap: 2rem 0;
     justify-items: center;
 
+    @media only screen and (max-width: $bp-800) {
+        grid-column: full-start / full-end;
+    }
+
+    @media only screen and (max-width: $bp-600) {
+        padding: 5rem;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: min-content minmax(3rem, max-content);
         gap: 5vh 2rem;
         align-items: center;
+
+        @media only screen and (max-width: $bp-800) {
+            grid-template-columns: repeat(3, min-content minmax(3rem, max-content));
+            gap: 5vh 5vw;
+        }
+
+        @media only screen and (max-width: $bp-600) {
+            grid-template-columns: min-content minmax(3rem, max-content);
+            gap: 2vh 2rem;
+        }
     }
 
     &__img {
