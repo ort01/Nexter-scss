@@ -6,7 +6,7 @@ The goal of the project is to practice creating an appealing and professional lo
 ## Tech Stack
 - HTML with Block Element Modifier
 - SCSS 
-    - focused mainly on using css grid.
+    - focused mainly on using CSS Grid Layout.
 
 ## Credit
 
